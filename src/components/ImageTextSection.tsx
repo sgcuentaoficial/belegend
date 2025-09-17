@@ -2,59 +2,58 @@ import React from 'react';
 
 const ImageTextSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
-          <div className="space-y-6">
-            <h2 className="text-4xl sm:text-5xl font-black text-black leading-tight">
-              FORJADO PARA
+          <div className="space-y-4">
+            <h2 className="text-3xl sm:text-4xl font-black text-black leading-tight">
+              DISEÑADO PARA
               <br />
-              <span className="text-gray-600">LA GRANDEZA</span>
+              <span className="text-gray-600">CAMPEONES</span>
             </h2>
             
-            <p className="text-xl text-gray-700 leading-relaxed">
-              Cada fibra, cada costura, cada detalle está diseñado para acompañarte 
-              en tu camino hacia la excelencia. No es solo ropa deportiva, es tu 
-              armadura para conquistar cada desafío.
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Cada prenda Be Legend está creada con la precisión de un atleta de élite. 
+              Materiales premium que se adaptan a tu cuerpo y potencian tu rendimiento.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-black"></div>
-                <span className="text-gray-700 font-medium">Tecnología de secado rápido</span>
+                <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+                <span className="text-gray-700 font-medium text-sm">Ajuste perfecto para máxima movilidad</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-black"></div>
-                <span className="text-gray-700 font-medium">Resistencia superior en cada entrenamiento</span>
+                <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+                <span className="text-gray-700 font-medium text-sm">Tecnología anti-sudor avanzada</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-black"></div>
-                <span className="text-gray-700 font-medium">Diseño ergonómico para máximo rendimiento</span>
+                <div className="w-1.5 h-1.5 bg-black rounded-full"></div>
+                <span className="text-gray-700 font-medium text-sm">Durabilidad probada por atletas</span>
               </div>
             </div>
             
-            <div className="pt-6">
-              <button className="bg-black hover:bg-gray-800 text-white font-black px-8 py-4 text-lg transition-all duration-300 hover:scale-105">
-                DESCUBRE LA COLECCIÓN
+            <div className="pt-4">
+              <button className="bg-black hover:bg-gray-800 text-white font-bold px-6 py-3 transition-all duration-300 hover:scale-105 text-sm uppercase tracking-wide">
+                Ver Colección
               </button>
             </div>
           </div>
           
           {/* Image */}
-          <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden">
+          <div className="relative lg:pl-8">
+            <div className="aspect-[3/4] max-w-sm mx-auto overflow-hidden">
               <img
-                src="/FrrU9cSI (1).jpeg"
-                alt="Be Legend Performance Wear"
+                src="https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Be Legend Performance Shorts"
                 className="w-full h-full object-cover"
               />
             </div>
             
             {/* Overlay Badge */}
-            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2">
-              <span className="text-black font-black text-sm uppercase tracking-wide">
-                Premium Quality
+            <div className="absolute top-4 left-8 lg:left-12 bg-white/95 backdrop-blur-sm px-3 py-1.5 shadow-sm">
+              <span className="text-black font-black text-xs uppercase tracking-wider">
+                Elite Series
               </span>
             </div>
           </div>

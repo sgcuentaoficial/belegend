@@ -6,6 +6,7 @@ import CategoryGrid from './components/CategoryGrid';
 import FeaturedProducts from './components/FeaturedProducts';
 import ImageTextSection from './components/ImageTextSection';
 import BrandStory from './components/BrandStory';
+import Community from './components/Community';
 import TrustSignals from './components/TrustSignals';
 import SEOContent from './components/SEOContent';
 import Newsletter from './components/Newsletter';
@@ -20,8 +21,9 @@ const HomePage = () => (
     <HeroSection />
     <CategoryGrid />
     <FeaturedProducts />
-    <ImageTextSection />
     <BrandStory />
+    <Community />
+    <ImageTextSection />
     <TrustSignals />
     <SEOContent />
     <Newsletter />
