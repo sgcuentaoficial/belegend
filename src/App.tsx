@@ -2,14 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import CategoryGrid from './components/CategoryGrid';
+import UrgencySection from './components/UrgencySection';
 import FeaturedProducts from './components/FeaturedProducts';
-import ImageTextSection from './components/ImageTextSection';
-import BrandStory from './components/BrandStory';
-import Community from './components/Community';
-import TrustSignals from './components/TrustSignals';
-import SEOContent from './components/SEOContent';
-import Newsletter from './components/Newsletter';
+import SocialProofSection from './components/SocialProofSection';
+import ConversionSection from './components/ConversionSection';
 import Footer from './components/Footer';
 import Collections from './pages/Collections';
 import Privacy from './pages/Privacy';
@@ -19,14 +15,10 @@ import Returns from './pages/Returns';
 const HomePage = () => (
   <>
     <HeroSection />
-    <CategoryGrid />
+    <UrgencySection />
     <FeaturedProducts />
-    <BrandStory />
-    <Community />
-    <ImageTextSection />
-    <TrustSignals />
-    <SEOContent />
-    <Newsletter />
+    <SocialProofSection />
+    <ConversionSection />
   </>
 );
 
