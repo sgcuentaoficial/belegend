@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import CategoryGrid from './components/CategoryGrid';
 import FeaturedProducts from './components/FeaturedProducts';
-import NewInSection from './components/NewInSection';
 import ImageTextSection from './components/ImageTextSection';
 import BrandStory from './components/BrandStory';
 import Community from './components/Community';
@@ -22,7 +21,6 @@ const HomePage = () => (
     <HeroSection />
     <CategoryGrid />
     <FeaturedProducts />
-    <NewInSection />
     <BrandStory />
     <Community />
     <ImageTextSection />
