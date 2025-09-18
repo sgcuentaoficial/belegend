@@ -1,66 +1,70 @@
 import React, { useState } from 'react';
-import { Heart, ShoppingCart, Star, Eye, ArrowRight } from 'lucide-react';
+import { Heart, ShoppingCart, Star, Eye, ArrowRight, Crown, Award, Sparkles } from 'lucide-react';
 
 const products = [
   {
     id: 1,
-    name: "Elite Performance Tank",
-    fit: "Athletic Fit",
-    color: "Midnight Black",
-    price: 89,
-    originalPrice: 120,
-    rating: 4.9,
-    reviews: 1247,
+    name: "Obsidian Elite Tank",
+    collection: "Masterpiece Series",
+    material: "Italian Merino Blend",
+    price: 189,
+    originalPrice: 250,
+    rating: 5.0,
+    reviews: 847,
     image: "https://images.pexels.com/photos/2204196/pexels-photo-2204196.jpeg?auto=compress&cs=tinysrgb&w=600",
-    badge: "BESTSELLER",
-    discount: 26,
+    badge: "MASTERPIECE",
+    discount: 24,
     inStock: true,
-    fastShipping: true
+    exclusive: true,
+    craftsmanship: "Hand-finished"
   },
   {
     id: 2,
-    name: "Pro Training Shorts",
-    fit: "Compression Fit", 
-    color: "Storm Grey",
-    price: 75,
-    originalPrice: 95,
-    rating: 4.8,
-    reviews: 892,
+    name: "Platinum Performance Short",
+    collection: "Elite Athleisure", 
+    material: "Swiss Technical Fabric",
+    price: 165,
+    originalPrice: 220,
+    rating: 5.0,
+    reviews: 623,
     image: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600",
-    badge: "LIMITED",
-    discount: 21,
+    badge: "EXCLUSIVE",
+    discount: 25,
     inStock: true,
-    fastShipping: true
+    exclusive: true,
+    craftsmanship: "Precision Cut"
   },
   {
     id: 3,
-    name: "Legend Sports Bra",
-    fit: "High Support",
-    color: "Pure White",
-    price: 65,
-    originalPrice: 85,
-    rating: 4.9,
-    reviews: 2156,
+    name: "Diamond Sports Bra",
+    collection: "Luxury Performance",
+    material: "Japanese Compression Tech",
+    price: 145,
+    originalPrice: 195,
+    rating: 5.0,
+    reviews: 1156,
     image: "https://images.pexels.com/photos/1153369/pexels-photo-1153369.jpeg?auto=compress&cs=tinysrgb&w=600",
-    badge: "TOP RATED",
-    discount: 24,
+    badge: "AWARD WINNER",
+    discount: 26,
     inStock: true,
-    fastShipping: true
+    exclusive: true,
+    craftsmanship: "Seamless Design"
   },
   {
     id: 4,
-    name: "Champion Hoodie",
-    fit: "Relaxed Fit",
-    color: "Carbon Black",
-    price: 125,
-    originalPrice: 160,
-    rating: 4.8,
-    reviews: 743,
+    name: "Sovereign Hoodie",
+    collection: "Royal Collection",
+    material: "Cashmere Blend",
+    price: 295,
+    originalPrice: 395,
+    rating: 5.0,
+    reviews: 432,
     image: "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=600",
-    badge: "NEW",
-    discount: 22,
+    badge: "LIMITED",
+    discount: 25,
     inStock: true,
-    fastShipping: false
+    exclusive: true,
+    craftsmanship: "Artisan Made"
   }
 ];
 
@@ -68,144 +72,148 @@ const FeaturedProducts = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-black text-white px-4 py-2 text-sm font-bold uppercase tracking-wider mb-4">
-            Featured Collection
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-gray-900/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Luxury Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-black px-6 py-3 text-sm font-black uppercase tracking-[0.2em] mb-8 font-serif">
+            <Crown className="h-4 w-4 mr-2" />
+            Curated Excellence
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
-            PERFORMANCE <span className="text-gray-600">ESSENTIALS</span>
+          
+          <h2 className="text-5xl md:text-7xl font-black text-black mb-6 leading-tight font-serif">
+            MASTERPIECE
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-8">
-            Engineered for athletes who demand excellence. Premium materials, cutting-edge design.
+          <h3 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 bg-clip-text text-transparent mb-8 leading-tight font-serif">
+            COLLECTION
+          </h3>
+          
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12 font-light leading-relaxed font-serif italic">
+            Where artisanal craftsmanship meets cutting-edge performance. Each piece meticulously designed 
+            for the discerning athlete who accepts nothing less than perfection.
           </p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {/* Premium Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {products.map((product) => (
             <div 
               key={product.id} 
-              className="group bg-white hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-black overflow-hidden"
+              className="group bg-white hover:shadow-2xl hover:shadow-gray-900/10 transition-all duration-700 border border-gray-100 hover:border-amber-400/30 overflow-hidden relative"
               onMouseEnter={() => setHoveredProduct(product.id)}
               onMouseLeave={() => setHoveredProduct(null)}
             >
               <div className="relative aspect-[3/4] overflow-hidden">
-                {/* Badges */}
+                {/* Premium Badges */}
                 <div className="absolute top-4 left-4 z-20 space-y-2">
-                  <div className={`px-3 py-1 text-xs font-black ${
-                    product.badge === 'BESTSELLER' ? 'bg-red-600 text-white' :
-                    product.badge === 'LIMITED' ? 'bg-orange-600 text-white' :
-                    product.badge === 'TOP RATED' ? 'bg-green-600 text-white' :
-                    'bg-blue-600 text-white'
-                  }`}>
+                  <div className={`px-4 py-2 text-xs font-black backdrop-blur-sm ${
+                    product.badge === 'MASTERPIECE' ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-black' :
+                    product.badge === 'EXCLUSIVE' ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white' :
+                    product.badge === 'AWARD WINNER' ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white' :
+                    'bg-gradient-to-r from-gray-800 to-black text-white'
+                  } font-serif tracking-wider`}>
                     {product.badge}
                   </div>
-                  {product.discount && (
-                    <div className="bg-black text-white px-3 py-1 text-xs font-black">
-                      -{product.discount}%
+                  {product.exclusive && (
+                    <div className="bg-black/80 text-amber-400 px-3 py-1 text-xs font-black backdrop-blur-sm font-serif">
+                      EXCLUSIVE
                     </div>
                   )}
                 </div>
 
-                {/* Action Buttons */}
-                <div className="absolute top-4 right-4 z-20 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="w-10 h-10 bg-white hover:bg-black hover:text-white rounded-full flex items-center justify-center transition-colors shadow-lg">
-                    <Heart className="h-4 w-4" />
+                {/* Luxury Action Buttons */}
+                <div className="absolute top-4 right-4 z-20 space-y-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <button className="w-12 h-12 bg-white/90 hover:bg-amber-400 hover:text-black rounded-full flex items-center justify-center transition-all duration-300 shadow-lg backdrop-blur-sm">
+                    <Heart className="h-5 w-5" />
                   </button>
-                  <button className="w-10 h-10 bg-white hover:bg-black hover:text-white rounded-full flex items-center justify-center transition-colors shadow-lg">
-                    <Eye className="h-4 w-4" />
+                  <button className="w-12 h-12 bg-white/90 hover:bg-amber-400 hover:text-black rounded-full flex items-center justify-center transition-all duration-300 shadow-lg backdrop-blur-sm">
+                    <Eye className="h-5 w-5" />
                   </button>
                 </div>
 
-                {/* Stock & Shipping Indicators */}
-                <div className="absolute bottom-4 left-4 z-20 space-y-1">
-                  {product.inStock && (
-                    <div className="bg-green-600 text-white px-2 py-1 text-xs font-bold">
-                      IN STOCK
-                    </div>
-                  )}
-                  {product.fastShipping && (
-                    <div className="bg-blue-600 text-white px-2 py-1 text-xs font-bold">
-                      FAST SHIPPING
-                    </div>
-                  )}
+                {/* Craftsmanship Badge */}
+                <div className="absolute bottom-4 left-4 z-20">
+                  <div className="bg-white/90 text-black px-3 py-1 text-xs font-bold backdrop-blur-sm font-serif">
+                    {product.craftsmanship}
+                  </div>
                 </div>
 
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 filter group-hover:brightness-110"
                 />
                 
-                {/* Quick Buy Overlay */}
-                <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 ${
+                {/* Luxury Quick Buy Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end justify-center pb-8 transition-all duration-500 ${
                   hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'
                 }`}>
-                  <button className="bg-white hover:bg-gray-100 text-black font-black px-6 py-3 flex items-center space-x-2 transition-all duration-300 transform hover:scale-105">
+                  <button className="bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 hover:from-yellow-500 hover:to-amber-600 text-black font-black px-8 py-4 flex items-center space-x-3 transition-all duration-300 transform hover:scale-105 shadow-2xl">
                     <ShoppingCart className="h-5 w-5" />
-                    <span>QUICK ADD</span>
+                    <span className="tracking-wide font-serif">ADD TO COLLECTION</span>
                   </button>
                 </div>
               </div>
 
-              <div className="p-6">
-                {/* Rating */}
-                <div className="flex items-center justify-between mb-3">
+              <div className="p-8">
+                {/* Perfect Rating */}
+                <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'
-                          }`}
-                        />
+                        <Star key={i} className="h-4 w-4 text-amber-400 fill-current" />
                       ))}
                     </div>
-                    <span className="text-gray-600 text-sm ml-2">({product.reviews})</span>
+                    <span className="text-gray-600 text-sm ml-2 font-medium">({product.reviews})</span>
                   </div>
-                  <div className="text-green-600 text-sm font-bold">
+                  <div className="flex items-center text-amber-600 text-sm font-bold">
+                    <Sparkles className="h-4 w-4 mr-1" />
                     {product.rating}
                   </div>
                 </div>
 
                 {/* Product Info */}
-                <h3 className="text-lg font-black text-black mb-2 group-hover:text-gray-600 transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 text-sm mb-1">{product.fit}</p>
-                <p className="text-gray-600 text-sm mb-4">{product.color}</p>
+                <div className="mb-4">
+                  <p className="text-gray-500 text-sm font-medium mb-1 font-serif">{product.collection}</p>
+                  <h3 className="text-xl font-black text-black mb-2 group-hover:text-amber-600 transition-colors font-serif">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm font-medium font-serif italic">{product.material}</p>
+                </div>
 
-                {/* Price */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-black text-black">${product.price}</span>
+                {/* Luxury Pricing */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl font-black text-black font-serif">${product.price}</span>
                     {product.originalPrice && (
-                      <span className="text-lg text-gray-400 line-through">${product.originalPrice}</span>
+                      <span className="text-lg text-gray-400 line-through font-serif">${product.originalPrice}</span>
                     )}
                   </div>
-                  <div className="text-green-600 text-sm font-bold">
+                  <div className="text-green-600 text-sm font-bold font-serif">
                     Save ${product.originalPrice - product.price}
                   </div>
                 </div>
 
-                {/* Add to Cart */}
-                <button className="w-full bg-black hover:bg-gray-800 text-white py-3 font-bold transition-all duration-300 hover:shadow-lg">
-                  ADD TO CART
+                {/* Premium Add to Cart */}
+                <button className="w-full bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-900 text-white py-4 font-black transition-all duration-300 hover:shadow-xl font-serif tracking-wide">
+                  ACQUIRE MASTERPIECE
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View All CTA */}
+        {/* Luxury View All CTA */}
         <div className="text-center">
-          <button className="group bg-black hover:bg-gray-800 text-white font-black px-12 py-4 text-lg transition-all duration-300 hover:scale-105 flex items-center mx-auto">
-            <span>VIEW ALL PRODUCTS</span>
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <button className="group bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 hover:from-yellow-500 hover:to-amber-600 text-black font-black px-16 py-6 text-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/25 flex items-center mx-auto font-serif tracking-wide">
+            <span>EXPLORE FULL COLLECTION</span>
+            <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
           </button>
         </div>
       </div>
