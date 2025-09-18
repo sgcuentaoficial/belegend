@@ -15,9 +15,8 @@ import Returns from './pages/Returns';
 const HomePage = () => (
   <>
     <HeroSection />
-    <EpicHeroSection />
     <FeaturedProducts />
-    <SocialProofSection />
+    <EpicHeroSection />
     <ConversionSection />
   </>
 );
