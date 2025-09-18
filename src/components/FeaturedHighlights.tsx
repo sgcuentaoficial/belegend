@@ -79,11 +79,11 @@ const FeaturedHighlights = () => {
           <div>
             <div className="flex items-center mb-4">
               <Crown className="h-6 w-6 text-amber-600 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-black text-black tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-black text-black">
                 FEATURED HIGHLIGHTS
               </h2>
             </div>
-            <p className="text-gray-600">Curated excellence for the discerning athlete</p>
+            <p className="text-gray-600 text-lg">Curated excellence for the discerning athlete</p>
           </div>
           
           <div className="flex items-center space-x-6">
