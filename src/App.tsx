@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import BestSellers from './components/BestSellers';
 import EpicHeroSection from './components/EpicHeroSection';
 import FeaturedProducts from './components/FeaturedProducts';
 import SocialProofSection from './components/SocialProofSection';
@@ -15,6 +16,7 @@ import Returns from './pages/Returns';
 const HomePage = () => (
   <>
     <HeroSection />
+    <BestSellers />
     <FeaturedProducts />
     <EpicHeroSection />
     <ConversionSection />
